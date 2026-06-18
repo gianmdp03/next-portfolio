@@ -4,5 +4,6 @@ export interface WorkExperienceType {
   company: string;
   startYear: string;
   endYear: string;
+  productionLink?: string;
   description: string;
 }

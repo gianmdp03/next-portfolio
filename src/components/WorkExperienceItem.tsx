@@ -3,6 +3,7 @@ type Props = {
   company: string;
   startYear: string;
   endYear: string;
+  productionLink?: string;
   description: string;
 };
 
@@ -11,6 +12,7 @@ const WorkExperienceItem = ({
   company,
   startYear,
   endYear,
+  productionLink,
   description,
 }: Props) => {
   return (

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -13,8 +14,13 @@ const Hero = ({ linkedinLink, githubLink, email }: Props) => {
       className="flex flex-col gap-8 items-center text-center"
     >
       <div className="flex flex-col items-center gap-4">
-        <div className="w-20 h-20 rounded-lg bg-zinc-800 border border-zinc-700 overflow-hidden flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500">
-          <span className="text-xs text-zinc-500">Foto</span>
+        <div className="w-20 h-20 rounded-lg bg-zinc-800 border border-zinc-700 overflow-hidden flex items-center justify-center  transition-all duration-500">
+          <Image
+            src={"/imagen_1.jpg"}
+            alt="Gianluca_foto"
+            width={800}
+            height={800}
+          />
         </div>
       </div>
       <div className="flex flex-col gap-5 items-center">

@@ -16,7 +16,7 @@ const AboutMe = () => {
           <p>
             Me siento cómodo diseñando soluciones donde
             <strong className="text-zinc-200 font-medium">
-              la persistencia de la información es crítica
+              &nbsp;la persistencia de la información es crítica
             </strong>
             . Presto especial atención a los detalles silenciosos pero
             fundamentales, como el manejo adecuado de logs para monitorear el
@@ -25,7 +25,7 @@ const AboutMe = () => {
           <p>
             Actualmente estoy desarrollando interfaces fluidas con
             <strong className="text-accent-tech font-medium">
-              Next.js y Tailwind CSS
+              &nbsp;Next.js y Tailwind CSS
             </strong>
             , integrándolas con mis APIs para entregar productos completos y
             escalables.
