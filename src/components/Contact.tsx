@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, SubmitEvent } from "react";
+import Link from "next/link";
 import { FiSend, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
 type Props = {
@@ -43,12 +44,22 @@ export default function Contact({ dict, lang }: Props) {
     setStatus("submitting");
 
     try {
-      // Simulate form submission (e.g. to Formspree, Web3Forms, or internal API)
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // Clear form
-      setFormData({ name: "", email: "", message: "" });
-      setStatus("success");
+      const form = e.currentTarget as HTMLFormElement;
+      const web3FormData = new FormData(form);
+      web3FormData.append("access_key", "86d074f9-ffcb-4968-8ca8-1712bd0cb289");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: web3FormData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setFormData({ name: "", email: "", message: "" });
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch (err) {
       console.error("Error submitting contact form:", err);
       setStatus("error");
@@ -57,16 +68,6 @@ export default function Contact({ dict, lang }: Props) {
 
   return (
     <section className="w-full max-w-xl mx-auto flex flex-col gap-8">
-      {/* Back button
-      <div>
-        <Link
-          href={`/${lang}`}
-          className="inline-flex items-center gap-2 text-xs font-mono text-zinc-500 hover:text-zinc-300 transition-colors group"
-        >
-          <FiArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
-          <span>// {dict.backButton}</span>
-        </Link>
-      </div>*/}
 
       {/* Header */}
       <div className="flex flex-col gap-3">
@@ -175,12 +176,12 @@ export default function Contact({ dict, lang }: Props) {
       )}
 
       {status === "success" && (
-        <button
-          onClick={() => setStatus("idle")}
-          className="self-center mt-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 rounded-md text-sm font-medium transition-colors"
+        <Link
+          href={`/${lang}`}
+          className="self-center mt-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 rounded-md text-sm font-medium transition-colors text-center inline-block"
         >
           {dict.backButton}
-        </button>
+        </Link>
       )}
     </section>
   );

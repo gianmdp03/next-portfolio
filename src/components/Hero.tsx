@@ -20,10 +20,7 @@ type Props = {
 
 const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
   return (
-    <section
-      id="hero"
-      className="flex flex-col gap-8 items-center text-center"
-    >
+    <section id="hero" className="flex flex-col gap-8 items-center text-center">
       <div className="flex flex-col items-center gap-4">
         <div className="w-40 h-40 rounded-lg bg-zinc-800 border border-zinc-700 overflow-hidden flex items-center justify-center transition-all duration-500">
           <Image
@@ -38,7 +35,7 @@ const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
       <div className="flex flex-col gap-5 items-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-100 tracking-tight max-w-xl">
           {dict.title}
-          <span className="text-zinc-100 bg-clip-text bg-linear-to-r">
+          <span className="text-gray-400 bg-clip-text bg-linear-to-r">
             Gianluca Castorina
           </span>
           .
