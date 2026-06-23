@@ -1,9 +1,62 @@
-// Force recompilation
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "@/dictionaries/get-dictionary";
 import ContactForm from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const isEn = lang === "en";
+  
+  const title = isEn
+    ? "Contact Me | Gianluca Castorina"
+    : "Contacto | Gianluca Castorina";
+    
+  const description = isEn
+    ? "Send me a message to get in touch. Let's work together on your software, API, backend, or frontend projects."
+    : "Envíame un mensaje para ponerte en contacto conmigo. Trabajemos juntos en proyectos de software, APIs, backend o frontend.";
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://castorina.dev";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${siteUrl}/${lang}/contact`,
+      languages: {
+        es: `${siteUrl}/es/contact`,
+        en: `${siteUrl}/en/contact`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: isEn ? "en_US" : "es_ES",
+      url: `${siteUrl}/${lang}/contact`,
+      siteName: "Gianluca Castorina Portfolio",
+      images: [
+        {
+          url: "/about-me.png",
+          width: 1200,
+          height: 630,
+          alt: "Gianluca Castorina - Full-Stack Developer",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/about-me.png"],
+    },
+  };
+}
 
 export default async function ContactPage({
   params,

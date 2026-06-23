@@ -14,6 +14,9 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://gianlucacastorina.vercel.app"
+  ),
   title: "Gianluca Castorina - Portfolio",
   description: "Portfolio de Gianluca Castorina",
 };

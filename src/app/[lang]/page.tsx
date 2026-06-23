@@ -6,6 +6,60 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import WorkExperience from "@/components/WorkExperience";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const isEn = lang === "en";
+  
+  const title = isEn
+    ? "Gianluca Castorina - Full-Stack Developer Portfolio"
+    : "Gianluca Castorina - Portafolio de Desarrollador Full-Stack";
+    
+  const description = isEn
+    ? "Full-Stack Developer from Mar del Plata, Argentina. I specialize in backend development with Spring Boot and database management, and frontend development with Next.js/Angular."
+    : "Desarrollador Full-Stack de Mar del Plata, Argentina. Me especializo en desarrollo backend con Spring Boot y gestión de bases de datos, y en el frontend con Next.js/Angular.";
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://castorina.dev";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${siteUrl}/${lang}`,
+      languages: {
+        es: `${siteUrl}/es`,
+        en: `${siteUrl}/en`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      locale: isEn ? "en_US" : "es_ES",
+      url: `${siteUrl}/${lang}`,
+      siteName: "Gianluca Castorina Portfolio",
+      images: [
+        {
+          url: "/about-me.png",
+          width: 1200,
+          height: 630,
+          alt: "Gianluca Castorina - Full-Stack Developer",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/about-me.png"],
+    },
+  };
+}
 
 export default async function Home({
   params,
