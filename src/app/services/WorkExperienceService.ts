@@ -5,7 +5,9 @@ if (!workExperienceApi) throw new Error("Falta el link de la API");
 
 export const WorkExperienceService = {
   get: async (lang: "es" | "en"): Promise<WorkExperienceType[]> => {
-    const response = await fetch(workExperienceApi);
+    const response = await fetch(workExperienceApi, {
+      next: { revalidate: 86400 }, // Cache for 24 hours
+    });
     if (!response.ok) throw new Error("Error de conexión");
     let text = await response.text();
     text = text.trim();

@@ -5,7 +5,9 @@ if (!projectsApi) throw new Error("Falta el link de la API");
 
 export const ProjectService = {
   get: async (lang: "es" | "en"): Promise<ProjectType[]> => {
-    const response = await fetch(projectsApi);
+    const response = await fetch(projectsApi, {
+      next: { revalidate: 86400 }, // Cache for 24 hours
+    });
     if (!response.ok) throw new Error("Error de conexión");
     let text = await response.text();
     text = text.trim();
