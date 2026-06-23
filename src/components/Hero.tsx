@@ -1,46 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
+import TechBadges from "./TechBadges";
 
 type Props = {
+  dict: {
+    title: string;
+    description: string;
+    descriptionBold: string;
+    descriptionEnd: string;
+    contact: string;
+  };
   linkedinLink: string;
   githubLink: string;
   email: string;
 };
 
-const Hero = ({ linkedinLink, githubLink, email }: Props) => {
+const Hero = ({ dict, linkedinLink, githubLink, email }: Props) => {
   return (
     <section
       id="inicio"
       className="flex flex-col gap-8 items-center text-center"
     >
       <div className="flex flex-col items-center gap-4">
-        <div className="w-20 h-20 rounded-lg bg-zinc-800 border border-zinc-700 overflow-hidden flex items-center justify-center  transition-all duration-500">
+        <div className="w-40 h-40 rounded-lg bg-zinc-800 border border-zinc-700 overflow-hidden flex items-center justify-center transition-all duration-500">
           <Image
-            src={"/imagen_1.jpg"}
+            src="/imagen_1.jpg"
             alt="Gianluca_foto"
-            width={800}
-            height={800}
+            width={1200}
+            height={1200}
           />
         </div>
       </div>
       <div className="flex flex-col gap-5 items-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-100 tracking-tight max-w-xl">
-          Hola. Soy&nbsp;
+          {dict.title}
           <span className="text-transparent bg-clip-text bg-linear-to-r from-accent-tech to-indigo-300">
             Gianluca Castorina
           </span>
           .
         </h1>
         <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl text-justify">
-          Desarrollador Full-Stack de Mar del Plata, Argentina. Especializado en
+          {dict.description}
           <strong className="text-zinc-200 font-semibold">
-            &nbsp;arquitecturas robustas, gestión de zonas horarias y
-            persistencia de datos
+            {dict.descriptionBold}
           </strong>
-          . Construyo software que funciona bien tanto en el servidor como en la
-          pantalla.
+          {dict.descriptionEnd}
         </p>
       </div>
+      <TechBadges />
       <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
         <Link
           href={`mailto:${email}`}
@@ -54,7 +61,7 @@ const Hero = ({ linkedinLink, githubLink, email }: Props) => {
           >
             <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-          Contactar
+          {dict.contact}
         </Link>
         <Link
           href={linkedinLink}

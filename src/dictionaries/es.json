@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "workExperience": "Experiencia laboral",
+    "projects": "Proyectos",
+    "aboutMe": "Acerca de mí"
+  },
+  "hero": {
+    "title": "Hola. Soy ",
+    "description": "Desarrollador Full-Stack de Mar del Plata, Argentina. Especializado en ",
+    "descriptionBold": "arquitecturas robustas, gestión de zonas horarias y persistencia de datos",
+    "descriptionEnd": ". Construyo software que funciona bien tanto en el servidor como en la pantalla.",
+    "contact": "Contactar"
+  },
+  "aboutMe": {
+    "title": "Acerca de mí",
+    "p1": "Mi interés por la programación nace de la necesidad de entender cómo fluyen y se protegen los datos. Disfruto de estructurar bases sólidas y asegurarme de que la lógica de negocio no tenga errores antes de volcar todo al cliente.",
+    "p2Start": "Me siento cómodo diseñando soluciones donde ",
+    "p2Bold": "la persistencia de la información es crítica",
+    "p2End": ". Presto especial atención a los detalles silenciosos pero fundamentales, como el manejo adecuado de logs para monitorear el comportamiento de las aplicaciones en entornos reales.",
+    "p3Start": "Actualmente estoy desarrollando interfaces fluidas con ",
+    "p3Bold": "Next.js y Tailwind CSS",
+    "p3Aux": ", integrándolas con mis APIs ",
+    "p4Bold": "Spring Boot",
+    "p4End": " para entregar productos completos y escalables."
+  },
+  "workExperience": {
+    "title": "Historial Laboral"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "repository": "Repositorio",
+    "repositoryFrontend": "Repositorio (Frontend)",
+    "repositoryBackend": "Repositorio (Backend)"
+  }
+}

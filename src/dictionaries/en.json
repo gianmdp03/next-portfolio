@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "workExperience": "Work Experience",
+    "projects": "Projects",
+    "aboutMe": "About me"
+  },
+  "hero": {
+    "title": "Hi. I'm ",
+    "description": "Full-Stack Developer from Mar del Plata, Argentina. Specialized in ",
+    "descriptionBold": "robust architectures, timezone management, and data persistence",
+    "descriptionEnd": ". I build software that works well both on the server and on the screen.",
+    "contact": "Contact"
+  },
+  "aboutMe": {
+    "title": "About me",
+    "p1": "My interest in programming stems from the need to understand how data flows and is protected. I enjoy structuring solid foundations and ensuring that business logic has no cracks before pushing everything to the client.",
+    "p2Start": "I feel comfortable designing solutions where ",
+    "p2Bold": "data persistence is critical",
+    "p2End": ". I pay special attention to silent but fundamental details, such as the proper handling of logs to monitor application behavior in real environments.",
+    "p3Start": "I am currently developing smooth interfaces with ",
+    "p3Bold": "Next.js and Tailwind CSS",
+    "p3Aux": ", integrating them with my ",
+    "p4Bold": "Spring Boot",
+    "p4End": " APIs to deliver complete and scalable products."
+  },
+  "workExperience": {
+    "title": "Work Experience"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "repository": "Repository",
+    "repositoryFrontend": "Repository (Frontend)",
+    "repositoryBackend": "Repository (Backend)"
+  }
+}

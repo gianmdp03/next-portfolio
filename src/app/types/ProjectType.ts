@@ -1,11 +1,16 @@
 export interface ProjectType {
-  id: string;
+  id: number | string;
   img: string;
   name: string;
   developedIn: StackId[];
   description: string;
   githubLink?: string | GitHubDualLink;
   previewLink?: string;
+}
+
+export interface ProjectsResponse {
+  es: ProjectType[];
+  en: ProjectType[];
 }
 
 export const STACKS = {

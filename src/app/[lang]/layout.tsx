@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fira_Code } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ReactNode } from "react";
 
 const inter = Inter({
@@ -18,14 +18,21 @@ export const metadata: Metadata = {
   description: "Portfolio de Gianluca Castorina",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: "es" }, { lang: "en" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
   return (
     <html
-      lang="es"
+      lang={lang}
       className={`${inter.variable} ${firaCode.variable} h-full antialiased`}
     >
       <body className="bg-bg-base text-zinc-300 font-sans antialiased selection:bg-accent-tech selection:text-white pb-20 overflow-x-hidden">
