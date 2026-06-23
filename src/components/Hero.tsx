@@ -40,7 +40,7 @@ const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
           </span>
           .
         </h1>
-        <p className="text-lg text-zinc-400 leading-relaxed max-w-2xl text-justify">
+        <p className="text-base md:text-lg text-zinc-400 leading-relaxed max-w-2xl text-left md:text-justify">
           {dict.description}
           <strong className="text-zinc-200 font-semibold">
             {dict.descriptionBold}

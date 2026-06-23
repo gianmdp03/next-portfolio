@@ -28,9 +28,7 @@ const ProjectItem = ({
   return (
     <article className="flex flex-col md:flex-row gap-8 group">
       <div className="w-full md:w-1/2 aspect-video bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group-hover:border-zinc-600 transition-colors relative">
-        <div className="absolute inset-0 flex items-center justify-center text-zinc-600 font-mono text-sm">
-          <Image src={img} alt={name} width={2000} height={2000} />
-        </div>
+        <Image src={img} alt={name} fill className="object-cover w-full h-full" />
       </div>
       <div className="w-full md:w-1/2 flex flex-col gap-4">
         <h3 className="text-xl font-bold text-zinc-100 group-hover:text-accent-tech transition-colors">
