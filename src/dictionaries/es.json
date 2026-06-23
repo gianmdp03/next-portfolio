@@ -1,27 +1,30 @@
 {
   "navbar": {
+    "start":"Inicio",
     "workExperience": "Experiencia laboral",
     "projects": "Proyectos",
     "aboutMe": "Acerca de mí"
   },
   "hero": {
     "title": "Hola. Soy ",
-    "description": "Desarrollador Full-Stack de Mar del Plata, Argentina. Especializado en ",
-    "descriptionBold": "arquitecturas robustas, gestión de zonas horarias y persistencia de datos",
-    "descriptionEnd": ". Construyo software que funciona bien tanto en el servidor como en la pantalla.",
+    "description": "Desarrollador Full-Stack de Mar del Plata, Argentina. Me especializo en el desarrollo backend con ",
+    "descriptionBold": "Spring Boot, diseño de APIs y gestión de bases de datos",
+    "descriptionMiddle": ". En el frontend trabajo con ",
+    "descriptionBold2": "Next.js y Angular",
+    "descriptionEnd": " para crear aplicaciones modernas, mantenibles y orientadas a una buena experiencia de usuario.",
     "contact": "Contactar"
   },
   "aboutMe": {
     "title": "Acerca de mí",
-    "p1": "Mi interés por la programación nace de la necesidad de entender cómo fluyen y se protegen los datos. Disfruto de estructurar bases sólidas y asegurarme de que la lógica de negocio no tenga errores antes de volcar todo al cliente.",
-    "p2Start": "Me siento cómodo diseñando soluciones donde ",
-    "p2Bold": "la persistencia de la información es crítica",
-    "p2End": ". Presto especial atención a los detalles silenciosos pero fundamentales, como el manejo adecuado de logs para monitorear el comportamiento de las aplicaciones en entornos reales.",
-    "p3Start": "Actualmente estoy desarrollando interfaces fluidas con ",
-    "p3Bold": "Next.js y Tailwind CSS",
-    "p3Aux": ", integrándolas con mis APIs ",
-    "p4Bold": "Spring Boot",
-    "p4End": " para entregar productos completos y escalables."
+    "p1": "Me gusta la programación porque disfruto entender cómo funcionan las cosas por detrás. Suelo enfocarme bastante en el backend, en que la lógica esté bien hecha, los datos se manejen correctamente y todo funcione de forma confiable antes de pensar en la interfaz.",
+    "p2Start": "También le doy importancia a detalles que a veces pasan desapercibidos, como ",
+    "p2Bold": "los logs y el monitoreo",
+    "p2End": ", porque ayudan mucho cuando una aplicación está en producción.",
+    "p3Start": "Actualmente trabajo con ",
+    "p3Bold": "Spring Boot",
+    "p3Aux": " para desarrollar APIs y con ",
+    "p4Bold": "Next.js o Angular junto con Tailwind CSS",
+    "p4End": " para el frontend, buscando construir aplicaciones completas y mantenibles."
   },
   "workExperience": {
     "title": "Historial Laboral"
@@ -31,5 +34,20 @@
     "repository": "Repositorio",
     "repositoryFrontend": "Repositorio (Frontend)",
     "repositoryBackend": "Repositorio (Backend)"
+  },
+  "contactForm": {
+    "title": "Contacto",
+    "subtitle": "Escríbeme un mensaje y me pondré en contacto contigo lo antes posible.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Email",
+    "emailPlaceholder": "tu@email.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Escribe tu mensaje aquí...",
+    "submitButton": "Enviar mensaje",
+    "submitting": "Enviando...",
+    "successMessage": "¡Mensaje enviado con éxito!",
+    "errorMessage": "Hubo un error al enviar el mensaje. Inténtalo de nuevo.",
+    "backButton": "Volver al inicio"
   }
 }

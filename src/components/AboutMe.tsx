@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Props = {
   dict: {
     title: string;
@@ -15,7 +17,7 @@ type Props = {
 
 const AboutMe = ({ dict }: Props) => {
   return (
-    <section id="sobre-mi" className="flex flex-col gap-10">
+    <section id="about-me" className="flex flex-col gap-10">
       <h2 className="text-2xl font-semibold text-zinc-100 flex items-center justify-center gap-3">
         <span className="text-accent-tech">/</span> {dict.title}
         <span className="text-accent-tech">\</span>
@@ -42,8 +44,13 @@ const AboutMe = ({ dict }: Props) => {
         </div>
         <div className="w-48 shrink-0 flex flex-col gap-3 mx-auto md:mx-0">
           <div className="aspect-4/5 bg-zinc-900 border border-zinc-800 rounded-md p-2 shadow-xl shadow-black/40">
-            <div className="w-full h-full bg-zinc-800 rounded flex items-center justify-center grayscale">
-              <span className="text-xs text-zinc-600">Foto_2.jpg</span>
+            <div className="relative w-full h-full bg-zinc-800 rounded overflow-hidden flex items-center justify-center">
+              <Image
+                src="/about-me.png"
+                alt="Foto_2"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

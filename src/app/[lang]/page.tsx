@@ -25,13 +25,14 @@ export default async function Home({
 
   return (
     <>
-      <Navbar dict={dict.navbar} />
-      <main className="max-w-3xl mx-auto px-6 pt-36 flex flex-col gap-28">
+      <Navbar dict={dict.navbar} lang={lang} />
+      <main className="max-w-3xl mx-auto px-6 pt-36 flex flex-col gap-16">
         <Hero
           dict={dict.hero}
           linkedinLink={linkedinLink}
           githubLink={githubLink}
           email={email}
+          lang={lang}
         />
         <WorkExperience dict={dict.workExperience} lang={lang} />
         <Projects dict={dict.projects} lang={lang} />

@@ -11,7 +11,7 @@ type Props = {
 const WorkExperience = async ({ dict, lang }: Props) => {
   const workExperience = await WorkExperienceService.get(lang);
   return (
-    <section id="experiencia" className="flex flex-col gap-8">
+    <section id="experience" className="flex flex-col gap-8">
       <h2 className="text-2xl font-semibold text-zinc-100 flex items-center justify-center gap-3">
         <span className="text-accent-tech">/</span> {dict.title}
         <span className="text-accent-tech">\</span>

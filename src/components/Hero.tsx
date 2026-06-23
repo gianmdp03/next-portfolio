@@ -7,18 +7,21 @@ type Props = {
     title: string;
     description: string;
     descriptionBold: string;
+    descriptionMiddle: string;
+    descriptionBold2: string;
     descriptionEnd: string;
     contact: string;
   };
   linkedinLink: string;
   githubLink: string;
   email: string;
+  lang: string;
 };
 
-const Hero = ({ dict, linkedinLink, githubLink, email }: Props) => {
+const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
   return (
     <section
-      id="inicio"
+      id="hero"
       className="flex flex-col gap-8 items-center text-center"
     >
       <div className="flex flex-col items-center gap-4">
@@ -26,15 +29,16 @@ const Hero = ({ dict, linkedinLink, githubLink, email }: Props) => {
           <Image
             src="/imagen_1.jpg"
             alt="Gianluca_foto"
-            width={1200}
-            height={1200}
+            width={160}
+            height={160}
+            className="object-cover w-full h-full"
           />
         </div>
       </div>
       <div className="flex flex-col gap-5 items-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-100 tracking-tight max-w-xl">
           {dict.title}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-accent-tech to-indigo-300">
+          <span className="text-zinc-100 bg-clip-text bg-linear-to-r">
             Gianluca Castorina
           </span>
           .
@@ -44,13 +48,17 @@ const Hero = ({ dict, linkedinLink, githubLink, email }: Props) => {
           <strong className="text-zinc-200 font-semibold">
             {dict.descriptionBold}
           </strong>
+          {dict.descriptionMiddle}
+          <strong className="text-zinc-200 font-semibold">
+            {dict.descriptionBold2}
+          </strong>
           {dict.descriptionEnd}
         </p>
       </div>
       <TechBadges />
       <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
         <Link
-          href={`mailto:${email}`}
+          href={`/${lang}/contact`}
           className="flex items-center gap-2 px-5 py-2.5 bg-zinc-100 hover:bg-white text-zinc-950 rounded-md text-sm font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)]"
         >
           <svg

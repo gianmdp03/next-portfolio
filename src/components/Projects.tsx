@@ -14,7 +14,7 @@ type Props = {
 const Projects = async ({ dict, lang }: Props) => {
   const data = await ProjectService.get(lang);
   return (
-    <section id="proyectos" className="flex flex-col gap-10">
+    <section id="projects" className="flex flex-col gap-10">
       <h2 className="text-2xl font-semibold text-zinc-100 flex items-center justify-center gap-3">
         <span className="text-accent-tech">/</span> {dict.title}
         <span className="text-accent-tech">\</span>

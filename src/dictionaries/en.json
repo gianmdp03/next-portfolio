@@ -1,27 +1,30 @@
 {
   "navbar": {
+    "start":"Home",
     "workExperience": "Work Experience",
     "projects": "Projects",
     "aboutMe": "About me"
   },
   "hero": {
     "title": "Hi. I'm ",
-    "description": "Full-Stack Developer from Mar del Plata, Argentina. Specialized in ",
-    "descriptionBold": "robust architectures, timezone management, and data persistence",
-    "descriptionEnd": ". I build software that works well both on the server and on the screen.",
+    "description": "Full-Stack Developer from Mar del Plata, Argentina. I specialize in backend development with ",
+    "descriptionBold": "Spring Boot, API design, and database management",
+    "descriptionMiddle": ". On the frontend, I work with ",
+    "descriptionBold2": "Next.js and Angular",
+    "descriptionEnd": " to create modern, maintainable, and user-experience-oriented applications.",
     "contact": "Contact"
   },
   "aboutMe": {
     "title": "About me",
-    "p1": "My interest in programming stems from the need to understand how data flows and is protected. I enjoy structuring solid foundations and ensuring that business logic has no cracks before pushing everything to the client.",
-    "p2Start": "I feel comfortable designing solutions where ",
-    "p2Bold": "data persistence is critical",
-    "p2End": ". I pay special attention to silent but fundamental details, such as the proper handling of logs to monitor application behavior in real environments.",
-    "p3Start": "I am currently developing smooth interfaces with ",
-    "p3Bold": "Next.js and Tailwind CSS",
-    "p3Aux": ", integrating them with my ",
-    "p4Bold": "Spring Boot",
-    "p4End": " APIs to deliver complete and scalable products."
+    "p1": "I like programming because I enjoy understanding how things work behind the scenes. I usually focus quite a bit on the backend, making sure the logic is well-made, data is handled correctly, and everything works reliably before thinking about the interface.",
+    "p2Start": "I also place importance on details that sometimes go unnoticed, such as ",
+    "p2Bold": "logs and monitoring",
+    "p2End": ", because they help a lot when an application is in production.",
+    "p3Start": "Currently, I work with ",
+    "p3Bold": "Spring Boot",
+    "p3Aux": " to develop APIs and with ",
+    "p4Bold": "Next.js or Angular along with Tailwind CSS",
+    "p4End": " for the frontend, seeking to build complete and maintainable applications."
   },
   "workExperience": {
     "title": "Work Experience"
@@ -31,5 +34,20 @@
     "repository": "Repository",
     "repositoryFrontend": "Repository (Frontend)",
     "repositoryBackend": "Repository (Backend)"
+  },
+  "contactForm": {
+    "title": "Contact Me",
+    "subtitle": "Send me a message and I'll get back to you as soon as possible.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Write your message here...",
+    "submitButton": "Send message",
+    "submitting": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "There was an error sending the message. Please try again.",
+    "backButton": "Back to home"
   }
 }
