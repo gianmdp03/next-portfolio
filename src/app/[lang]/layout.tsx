@@ -15,10 +15,13 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://gianlucacastorina.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://gianlucacastorina.vercel.app",
   ),
   title: "Gianluca Castorina - Portfolio",
   description: "Portfolio de Gianluca Castorina",
+  verification: {
+    google: "haBby92TARYNlNSYZoJYL1Ze2bPcSddKcWUV5ywFTqs",
+  },
 };
 
 export async function generateStaticParams() {
