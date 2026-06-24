@@ -15,11 +15,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const isEn = lang === "en";
-  
+
   const title = isEn
     ? "Gianluca Castorina - Full-Stack Developer Portfolio"
-    : "Gianluca Castorina - Portafolio de Desarrollador Full-Stack";
-    
+    : "Gianluca Castorina - Portfolio de Desarrollador Full-Stack";
+
   const description = isEn
     ? "Full-Stack Developer from Mar del Plata, Argentina. I specialize in backend development with Spring Boot and database management, and frontend development with Next.js/Angular."
     : "Desarrollador Full-Stack de Mar del Plata, Argentina. Me especializo en desarrollo backend con Spring Boot y gestión de bases de datos, y en el frontend con Next.js/Angular.";
