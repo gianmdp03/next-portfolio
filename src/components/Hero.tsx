@@ -99,10 +99,18 @@ const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
           </svg>
           GitHub
         </Link>
-        <a
-          href={lang === "es" ? "/CV_Gianluca_Castorina.pdf" : "/Gianluca_Castorina_Resume.pdf"}
-          download={lang === "es" ? "CV Gianluca Castorina.pdf" : "Gianluca Castorina's Resume.pdf"}
-          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-md text-sm text-zinc-300 font-medium transition-colors"
+        <Link
+          href={
+            lang === "es"
+              ? "/CV_Gianluca_Castorina.pdf"
+              : "/Gianluca_Castorina_Resume.pdf"
+          }
+          download={
+            lang === "es"
+              ? "CV Gianluca Castorina.pdf"
+              : "Gianluca Castorina's Resume.pdf"
+          }
+          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-100 hover:bg-white text-zinc-950 rounded-md text-sm font-semibold transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -120,7 +128,7 @@ const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
             />
           </svg>
           {dict.downloadResume}
-        </a>
+        </Link>
       </div>
     </section>
   );
