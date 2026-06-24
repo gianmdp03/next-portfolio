@@ -11,6 +11,7 @@ type Props = {
     descriptionBold2: string;
     descriptionEnd: string;
     contact: string;
+    downloadResume: string;
   };
   linkedinLink: string;
   githubLink: string;
@@ -90,6 +91,28 @@ const Hero = ({ dict, linkedinLink, githubLink, email, lang }: Props) => {
           </svg>
           GitHub
         </Link>
+        <a
+          href={lang === "es" ? "/CV_Gianluca_Castorina.pdf" : "/Gianluca_Castorina_Resume.pdf"}
+          download={lang === "es" ? "CV Gianluca Castorina.pdf" : "Gianluca Castorina's Resume.pdf"}
+          className="flex items-center gap-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-md text-sm text-zinc-300 font-medium transition-colors"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+            />
+          </svg>
+          {dict.downloadResume}
+        </a>
       </div>
     </section>
   );
