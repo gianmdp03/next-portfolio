@@ -29,7 +29,8 @@
     "p4End": " for the frontend, seeking to build complete and maintainable applications."
   },
   "workExperience": {
-    "title": "Work Experience"
+    "title": "Work Experience",
+    "productionLinkText": "Currently in production!"
   },
   "projects": {
     "title": "Featured Projects",

@@ -29,7 +29,8 @@
     "p4End": " para el frontend, buscando construir aplicaciones completas y mantenibles."
   },
   "workExperience": {
-    "title": "Historial Laboral"
+    "title": "Historial Laboral",
+    "productionLinkText": "Actualmente se encuentra en producción!"
   },
   "projects": {
     "title": "Proyectos Destacados",

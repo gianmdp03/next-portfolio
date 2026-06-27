@@ -4,6 +4,7 @@ import WorkExperienceItem from "./WorkExperienceItem";
 type Props = {
   dict: {
     title: string;
+    productionLinkText: string;
   };
   lang: "es" | "en";
 };
@@ -25,6 +26,8 @@ const WorkExperience = async ({ dict, lang }: Props) => {
             startYear={work.startYear}
             endYear={work.endYear}
             description={work.description}
+            productionLink={work.productionLink}
+            productionLinkText={dict.productionLinkText}
           />
         ))}
       </div>

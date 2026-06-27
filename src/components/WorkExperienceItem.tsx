@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Props = {
   position: string;
   company: string;
@@ -5,6 +7,7 @@ type Props = {
   endYear: string;
   productionLink?: string;
   description: string;
+  productionLinkText: string;
 };
 
 const WorkExperienceItem = ({
@@ -14,6 +17,7 @@ const WorkExperienceItem = ({
   endYear,
   productionLink,
   description,
+  productionLinkText,
 }: Props) => {
   return (
     <div className="relative pl-8 md:grid md:grid-cols-[1fr,2fr] gap-6 group">
@@ -28,6 +32,22 @@ const WorkExperienceItem = ({
       <div className="flex flex-col gap-3">
         <p className="text-zinc-400 leading-relaxed text-sm/6">{description}</p>
       </div>
+      {productionLink && (
+        <div className="flex flex-col gap-3">
+          <p className="text-zinc-400 leading-relaxed text-sm/6">
+            {productionLinkText}
+          </p>
+
+          <Link
+            href={productionLink}
+            className="flex items-center gap-2 px-5 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-md text-sm text-zinc-300 font-medium transition-colors"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {productionLink}
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
